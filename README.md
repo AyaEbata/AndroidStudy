@@ -48,6 +48,7 @@
     - `var count = 0` で読み書きするのではなくて `private var _count = 0` と別にgetter変数を用意する
     - 外から変更できなくなる
 - `dat aclass` の `copy()` を使用してオブジェクトをコピーすると、一部のプロパティを変更し、残りのプロパティはそのままにするということができる
+- `@VisibleForTesting` はテストのためにpublicやprotected、package privateにする場合につける
 
 ## Androidメモ
 - Android アプリの UI 要素では、2 種類の測定単位がある

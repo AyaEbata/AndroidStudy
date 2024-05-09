@@ -16,9 +16,9 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.example.androidstudy.theme.SuperheroesShapes
-import com.example.androidstudy.theme.ThirtyDaysShapes
-import com.example.androidstudy.theme.WoofShapes
+import com.example.androidstudy.ui.theme.SuperheroesShapes
+import com.example.androidstudy.ui.theme.ThirtyDaysShapes
+import com.example.androidstudy.ui.theme.WoofShapes
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

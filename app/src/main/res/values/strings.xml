@@ -116,4 +116,25 @@
     <string name="day19_description">Android ビューでアプリを作成するための基礎と、ビューで作成したアプリにコンポーザブルを追加する方法について学習します。</string>
     <string name="day20_title">Compose 内のビュー</string>
     <string name="day20_description">Jetpack Compose で作成したアプリに既存のビューを追加して使用する方法について学習します。</string>
+    <string name="greeting_button">1. 自己紹介カードの作成</string>
+    <string name="birthday_card_button">2. バースデーカードの作成</string>
+    <string name="birthday_card_with_image_button">3. 背景画像のあるバースデーカードの作成</string>
+    <string name="article_button">4. 記事ページの作成</string>
+    <string name="completed_task_button">5. タスクをすべて完了したときに表示される\n画面の作成</string>
+    <string name="quarter_button">6. 4分割の画面を作成</string>
+    <string name="dice_roller_button">7. サイコロアプリの作成</string>
+    <string name="lemonade_button">8. Lemonadeアプリの作成</string>
+    <string name="tip_time_button">9. チップ計算アプリの作成</string>
+    <string name="image_button">10. 画像アプリの作成</string>
+    <string name="affirmations_button">11. スクロール可能なリスト</string>
+    <string name="courses_button">12. コース一覧アプリの作成</string>
+    <string name="woof_button">13. 犬アプリ</string>
+    <string name="superheroes_button">14. Superheroesアプリ</string>
+    <string name="thirty_days_button">15. 30日間アプリ</string>
+    <string name="dessert_clicker_text">16. Dessert Clicker</string>
+    <string name="dessert_clicker_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-dessert-clicker を直接変更</string>
+    <string name="unscramble_text">17. Unscramble</string>
+    <string name="unscramble_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-unscramble を直接変更</string>
+    <string name="cupcake_text">18. Cupcake</string>
+    <string name="cupcake_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-cupcake を直接変更</string>
 </resources>

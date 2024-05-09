@@ -1,4 +1,4 @@
-package com.example.androidstudy
+package com.example.androidstudy.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -20,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.androidstudy.R
 import com.example.androidstudy.data.HeroDatasource
 import com.example.androidstudy.model.Hero
 import com.example.androidstudy.ui.theme.SuperheroesTheme
