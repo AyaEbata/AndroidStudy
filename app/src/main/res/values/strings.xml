@@ -137,4 +137,7 @@
     <string name="unscramble_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-unscramble を直接変更</string>
     <string name="cupcake_text">18. Cupcake</string>
     <string name="cupcake_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-cupcake を直接変更</string>
+    <string name="lunch_tray_text">19. Lunch Tray</string>
+    <string name="lunch_tray_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-lunch-tray を直接変更</string>
+    <string name="back_button">back button</string>
 </resources>

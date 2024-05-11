@@ -109,6 +109,12 @@ fun MenuScreen(
             modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
         )
         Text(text = stringResource(R.string.cupcake_description))
+        Text(
+            text = stringResource(R.string.lunch_tray_text),
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
+        )
+        Text(text = stringResource(R.string.lunch_tray_description))
     }
 }
 

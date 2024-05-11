@@ -81,6 +81,8 @@
 - ライブサイクルについて: https://developer.android.com/reference/android/app/Activity#activity-lifecycle
 - アーキテクチャについて: https://developer.android.com/topic/architecture?hl=ja
 - テストメソッドは、テスト インスタンスの状態が可変であることによる予期しない副作用を避けるために、各テストメソッドが実行される前に JUnit がテストクラスの新しいインスタンスを作成する
+- テストメソッドの命名規則としては、`thingUnderTest_TriggerOfTest_ResultOfTest` で書く
+    - ex) `cupcakeNavHost_clickOneCupcake_navigatesToSelectFlavorScreen`
 
 ## Android Studioメモ
 - `Control+O` でオーバーライドできるメソッドを呼び出して選択できる
@@ -141,6 +143,9 @@
 - テーマビルダー: https://m3.material.io/theme-builder#/custom
 - アイコン: https://fonts.google.com/icons
 - typographyの種類: https://m3.material.io/styles/typography/applying-type
+
+## JUnit メモ
+- `@get:Rule` はgetterプロパティに対して `@Rule` を適用するということ
 
 ## サンプルコード Unscramble メモ
 - https://github.com/google-developer-training/basic-android-kotlin-compose-training-unscramble/tree/starter
