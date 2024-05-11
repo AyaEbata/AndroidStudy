@@ -29,7 +29,7 @@ fun QuarterScreen() {
 }
 
 @Composable
-fun Quarter() {
+private fun Quarter() {
     Column {
         Row(modifier = Modifier.weight(1f)) {
             Panel(
@@ -67,7 +67,7 @@ fun Quarter() {
 }
 
 @Composable
-fun Panel(title: String, description: String, modifier: Modifier = Modifier) {
+private fun Panel(title: String, description: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -89,7 +89,7 @@ fun Panel(title: String, description: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun QuarterScreenPreview() {
+private fun QuarterScreenPreview() {
     AndroidStudyTheme {
         QuarterScreen()
     }

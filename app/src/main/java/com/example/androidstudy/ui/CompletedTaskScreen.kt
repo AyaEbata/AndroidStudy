@@ -33,7 +33,7 @@ fun CompletedTaskScreen() {
 }
 
 @Composable
-fun CompletedTask() {
+private fun CompletedTask() {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -60,7 +60,7 @@ fun CompletedTask() {
 
 @Preview(showBackground = true)
 @Composable
-fun CompletedTaskScreenPreview() {
+private fun CompletedTaskScreenPreview() {
     AndroidStudyTheme {
         CompletedTaskScreen()
     }

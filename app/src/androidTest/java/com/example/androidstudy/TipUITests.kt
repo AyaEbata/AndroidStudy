@@ -3,6 +3,7 @@ package com.example.androidstudy
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
+import com.example.androidstudy.ui.TipTimeScreen
 import com.example.androidstudy.ui.theme.AndroidStudyTheme
 import org.junit.Rule
 import org.junit.Test
@@ -17,7 +18,7 @@ class TipUITests {
     fun calculate_20_percent_tip() {
         composeTestRule.setContent {
             AndroidStudyTheme {
-                TipTimeLayout()
+                TipTimeScreen()
             }
         }
         composeTestRule.onNodeWithText("Bill Amount").performTextInput("10")

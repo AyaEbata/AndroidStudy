@@ -22,7 +22,7 @@ fun GreetingScreen() {
 }
 
 @Composable
-fun Greeting(name: String) {
+private fun Greeting(name: String) {
     // Surface は、外観（背景色や枠線など）を変更できる UI のセクションを表すコンテナ。
     Surface(color = Color.Magenta) {
         Text(
@@ -38,7 +38,7 @@ fun Greeting(name: String) {
     name = "greeting",
 )
 @Composable
-fun GreetingScreenPreview() {
+private fun GreetingScreenPreview() {
     AndroidStudyTheme {
         GreetingScreen()
     }

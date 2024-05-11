@@ -115,12 +115,18 @@ fun MenuScreen(
             modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
         )
         Text(text = stringResource(R.string.lunch_tray_description))
+        Text(
+            text = stringResource(R.string.reply_text),
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
+        )
+        Text(text = stringResource(R.string.reply_description))
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun MenuScreenPreview() {
+private fun MenuScreenPreview() {
     AndroidStudyTheme {
         MenuScreen(
             onGreetingButtonClicked = {},

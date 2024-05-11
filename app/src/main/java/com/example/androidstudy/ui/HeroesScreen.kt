@@ -39,7 +39,7 @@ fun HeroesScreen(contentPadding: PaddingValues, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Hero(hero: Hero, modifier: Modifier = Modifier) {
+private fun Hero(hero: Hero, modifier: Modifier = Modifier) {
     Card(modifier = modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(16.dp)) {
             Column(modifier = Modifier
@@ -65,7 +65,7 @@ fun Hero(hero: Hero, modifier: Modifier = Modifier) {
 
 @Preview
 @Composable
-fun HeroPreview() {
+private fun HeroPreview() {
     SuperheroesTheme {
         Hero(
             Hero(
@@ -79,7 +79,7 @@ fun HeroPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun HeroesScreenPreview() {
+private fun HeroesScreenPreview() {
     SuperheroesTheme {
         Surface(color = MaterialTheme.colorScheme.background) {
             HeroesScreen(contentPadding = PaddingValues(), modifier = Modifier.padding(16.dp))

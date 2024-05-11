@@ -170,3 +170,4 @@
 ## 参考になったリンク
 - [関数(Function)とプロパティ(Property)、どちらを使うべき？](https://zenn.dev/pytokyo/articles/63f862678958d335812a)
 - [navController.popBackStack()のinclusiveについて](https://medium.com/@banmarkovic/jetpack-compose-clear-back-stack-popbackstack-inclusive-explained-14ee73a29df5)
+- [サンプルソース](https://github.com/android/nowinandroid)

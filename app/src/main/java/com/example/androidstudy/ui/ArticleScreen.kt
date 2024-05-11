@@ -28,7 +28,7 @@ fun ArticleScreen() {
 }
 
 @Composable
-fun Article() {
+private fun Article() {
     Column {
         Image(
             painter = painterResource(id = R.drawable.bg_compose_background),
@@ -55,7 +55,7 @@ fun Article() {
 
 @Preview(showBackground = true)
 @Composable
-fun ArticleScreenPreview() {
+private fun ArticleScreenPreview() {
     AndroidStudyTheme {
         ArticleScreen()
     }

@@ -36,7 +36,7 @@ fun BirthdayCardWithImageScreen() {
 }
 
 @Composable
-fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
+private fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = modifier
@@ -58,7 +58,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+private fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.androidparty)
     Box {
         Image(
@@ -79,7 +79,7 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 
 @Preview(showBackground = true)
 @Composable
-fun BirthdayCardWithImageScreenPreview() {
+private fun BirthdayCardWithImageScreenPreview() {
     AndroidStudyTheme {
         BirthdayCardWithImageScreen()
     }

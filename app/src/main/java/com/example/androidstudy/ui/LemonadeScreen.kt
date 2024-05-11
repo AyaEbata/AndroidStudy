@@ -41,7 +41,7 @@ fun LemonadeScreen() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LemonadeApp() {
+private fun LemonadeApp() {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -68,7 +68,7 @@ fun LemonadeApp() {
 }
 
 @Composable
-fun Lemonade(modifier: Modifier = Modifier) {
+private fun Lemonade(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -80,7 +80,7 @@ fun Lemonade(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun LemonadeImageButton() {
+private fun LemonadeImageButton() {
     var step by remember { mutableIntStateOf(1) }
     var squeeze by remember { mutableIntStateOf(0) }
 
@@ -119,7 +119,7 @@ private fun lemonadeImage(step: Int): Int {
 
 @Preview(showBackground = true)
 @Composable
-fun LemonadeScreenPreview() {
+private fun LemonadeScreenPreview() {
     AndroidStudyTheme {
         LemonadeScreen()
     }

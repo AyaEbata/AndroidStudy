@@ -26,7 +26,7 @@ fun SuperheroesScreen() {
 }
 
 @Composable
-fun SuperheroesApp() {
+private fun SuperheroesApp() {
     Scaffold(topBar = { SuperheroesTopBar() }) {
         HeroesScreen(contentPadding = it, modifier = Modifier.padding(16.dp))
     }
@@ -34,7 +34,7 @@ fun SuperheroesApp() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SuperheroesTopBar(modifier: Modifier = Modifier) {
+private fun SuperheroesTopBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
         title = {
             Text(
@@ -48,7 +48,7 @@ fun SuperheroesTopBar(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun SuperheroesScreenPreview() {
+private fun SuperheroesScreenPreview() {
     AndroidStudyTheme {
         SuperheroesScreen()
     }

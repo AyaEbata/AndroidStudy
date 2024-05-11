@@ -30,7 +30,7 @@ fun BirthdayCardScreen() {
 }
 
 @Composable
-fun BirthdayCard(message: String, from: String, modifier: Modifier = Modifier) {
+private fun BirthdayCard(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = modifier,
@@ -53,7 +53,7 @@ fun BirthdayCard(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun BirthdayCardScreenPreview() {
+private fun BirthdayCardScreenPreview() {
     AndroidStudyTheme {
         BirthdayCardScreen()
     }

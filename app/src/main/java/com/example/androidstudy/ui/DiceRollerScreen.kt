@@ -35,7 +35,7 @@ fun DiceRollerScreen() {
 }
 
 @Composable
-fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
+private fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     var result by remember { mutableStateOf(1) }
 
     val imageResource = when (result) {
@@ -64,7 +64,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun DiceRollerScreenPreview() {
+private fun DiceRollerScreenPreview() {
     AndroidStudyTheme {
         DiceRollerScreen()
     }

@@ -39,14 +39,14 @@ fun AffirmationsScreen() {
 }
 
 @Composable
-fun AffirmationsApp() {
+private fun AffirmationsApp() {
     AffirmationList(
         affirmationList = AffirmationDatasource.load(),
     )
 }
 
 @Composable
-fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
+private fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         items(affirmationList) { affirmation ->
             AffirmationCard(
@@ -58,7 +58,7 @@ fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Mod
 }
 
 @Composable
-fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
+private fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Column {
             Image(
@@ -86,7 +86,7 @@ private fun AffirmationCardPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun AffirmationsScreenPreview() {
+private fun AffirmationsScreenPreview() {
     AndroidStudyTheme {
         AffirmationsScreen()
     }

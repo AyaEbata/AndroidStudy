@@ -30,7 +30,7 @@ fun ThirtyDaysScreen() {
 }
 
 @Composable
-fun ThirtyDaysApp() {
+private fun ThirtyDaysApp() {
     Scaffold(topBar = { ThirtyDaysTopBar() }) {
         Surface(modifier = Modifier.padding(it)) {
             ThirtyDaysList(modifier = Modifier.padding(horizontal = 16.dp))
@@ -40,7 +40,7 @@ fun ThirtyDaysApp() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ThirtyDaysTopBar(modifier: Modifier = Modifier) {
+private fun ThirtyDaysTopBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
         title = {
             Text(
@@ -54,7 +54,7 @@ fun ThirtyDaysTopBar(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun ThirtyDaysScreenPreview() {
+private fun ThirtyDaysScreenPreview() {
     AndroidStudyTheme {
         ThirtyDaysScreen()
     }

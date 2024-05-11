@@ -45,7 +45,7 @@ fun ImageScreen() {
 }
 
 @Composable
-fun ImageApp() {
+private fun ImageApp() {
     var imageNumber by remember { mutableIntStateOf(0) }
 
     Column(
@@ -66,7 +66,7 @@ fun ImageApp() {
 }
 
 @Composable
-fun ImageContainer(imageNumber: Int, modifier: Modifier = Modifier) {
+private fun ImageContainer(imageNumber: Int, modifier: Modifier = Modifier) {
     val images = ImageInfoDatasource.load()
 
     Column(modifier = modifier.width(320.dp)) {
@@ -85,7 +85,7 @@ fun ImageContainer(imageNumber: Int, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Description(imageInfo: ImageInfo) {
+private fun Description(imageInfo: ImageInfo) {
     Column(
         modifier = Modifier
             .background(color = Color(0xFFECEBF3))
@@ -104,7 +104,7 @@ fun Description(imageInfo: ImageInfo) {
 }
 
 @Composable
-fun ButtonContainer(next: () -> Unit, previous: () -> Unit) {
+private fun ButtonContainer(next: () -> Unit, previous: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -134,7 +134,7 @@ fun ButtonContainer(next: () -> Unit, previous: () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-fun ImageScreenPreview() {
+private fun ImageScreenPreview() {
     AndroidStudyTheme {
         ImageScreen()
     }

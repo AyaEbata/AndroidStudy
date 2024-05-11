@@ -40,7 +40,7 @@ fun ThirtyDaysList(modifier: Modifier = Modifier) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ThirtyDaysPanel(index: Int, oneDay: OneDay, modifier: Modifier = Modifier) {
+private fun ThirtyDaysPanel(index: Int, oneDay: OneDay, modifier: Modifier = Modifier) {
     var expanded by remember { mutableStateOf(false) }
 
     Card(modifier = modifier, onClick = { expanded = !expanded }) {
@@ -70,7 +70,7 @@ fun ThirtyDaysPanel(index: Int, oneDay: OneDay, modifier: Modifier = Modifier) {
 
 @Preview
 @Composable
-fun ThirtyDaysPanelPreview() {
+private fun ThirtyDaysPanelPreview() {
     ThirtyDaysTheme {
         ThirtyDaysPanel(1, OneDay(R.string.day1_title, R.string.day1_description, R.drawable.day1))
     }
@@ -78,7 +78,7 @@ fun ThirtyDaysPanelPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun ThirtyDaysListPreview() {
+private fun ThirtyDaysListPreview() {
     ThirtyDaysTheme {
         ThirtyDaysList()
     }

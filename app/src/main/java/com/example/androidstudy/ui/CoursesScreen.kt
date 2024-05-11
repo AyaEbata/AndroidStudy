@@ -35,7 +35,7 @@ fun CoursesScreen() {
 }
 
 @Composable
-fun Courses(modifier: Modifier = Modifier) {
+private fun Courses(modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -49,7 +49,7 @@ fun Courses(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Topic(topic: Topic) {
+private fun Topic(topic: Topic) {
     Card {
         Row {
             Image(
@@ -82,7 +82,7 @@ fun Topic(topic: Topic) {
 
 @Preview(showBackground = true)
 @Composable
-fun CoursesScreenPreview() {
+private fun CoursesScreenPreview() {
     AndroidStudyTheme {
         CoursesScreen()
     }

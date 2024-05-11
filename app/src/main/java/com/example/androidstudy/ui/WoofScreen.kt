@@ -64,7 +64,7 @@ fun WoofScreen() {
 }
 
 @Composable
-fun WoofApp() {
+private fun WoofApp() {
     Scaffold(
         topBar = {
             WoofTopAppBar()
@@ -83,7 +83,7 @@ fun WoofApp() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WoofTopAppBar(modifier: Modifier = Modifier) {
+private fun WoofTopAppBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -105,7 +105,7 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun DogItem(
+private fun DogItem(
     dog: Dog,
     modifier: Modifier = Modifier
 ) {
@@ -156,7 +156,7 @@ fun DogItem(
 }
 
 @Composable
-fun DogIcon(
+private fun DogIcon(
     @DrawableRes dogIcon: Int,
     modifier: Modifier = Modifier
 ) {
@@ -172,7 +172,7 @@ fun DogIcon(
 }
 
 @Composable
-fun DogInformation(
+private fun DogInformation(
     @StringRes dogName: Int,
     dogAge: Int,
     modifier: Modifier = Modifier
@@ -209,7 +209,7 @@ private fun DogItemButton(
 }
 
 @Composable
-fun DogHobby(
+private fun DogHobby(
     @StringRes dogHobby: Int,
     modifier: Modifier = Modifier
 ) {
@@ -229,7 +229,7 @@ fun DogHobby(
 
 @Preview(showBackground = true)
 @Composable
-fun WoofPreview() {
+private fun WoofPreview() {
     WoofTheme(darkTheme = false) {
         WoofApp()
     }
@@ -237,7 +237,7 @@ fun WoofPreview() {
 
 @Preview
 @Composable
-fun WoofDarkThemePreview() {
+private fun WoofDarkThemePreview() {
     WoofTheme(darkTheme = true) {
         WoofApp()
     }
@@ -245,7 +245,7 @@ fun WoofDarkThemePreview() {
 
 @Preview
 @Composable
-fun WoofScreenPreview() {
+private fun WoofScreenPreview() {
     AndroidStudyTheme {
         WoofScreen()
     }

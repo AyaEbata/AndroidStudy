@@ -52,7 +52,7 @@ fun TipTimeScreen() {
 }
 
 @Composable
-fun TipTimeLayout() {
+private fun TipTimeLayout() {
     var amountInput by remember { mutableStateOf("") }
     val amount = amountInput.toDoubleOrNull() ?: 0.0
 
@@ -116,7 +116,7 @@ fun TipTimeLayout() {
 }
 
 @Composable
-fun EditNumberField(
+private fun EditNumberField(
     @StringRes label: Int,
     @DrawableRes leadingIcon: Int,
     value: String,
@@ -136,7 +136,7 @@ fun EditNumberField(
 }
 
 @Composable
-fun RoundTheTipRow(
+private fun RoundTheTipRow(
     roundUp: Boolean,
     onRoundUpChanged: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
@@ -173,7 +173,7 @@ internal fun calculateTip(
 
 @Preview(showBackground = true)
 @Composable
-fun TipTimeScreenPreview() {
+private fun TipTimeScreenPreview() {
     AndroidStudyTheme {
         TipTimeScreen()
     }
