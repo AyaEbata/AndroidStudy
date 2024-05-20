@@ -149,6 +149,7 @@
 - `@Preview(showBackground = true, widthDp = 700)` のように書くことでプレビューで画面サイズを指定できる
 - 構成変更のテストを書くときは `StateRestorationTester` を使う
     - `emulateSavedInstanceStateRestore()` で構成変更されたことをシミュレートする
+- `BackHandler` で戻るボタンの制御ができる
 
 ## マテリアルデザインメモ
 - テーマビルダー: https://m3.material.io/theme-builder#/custom
