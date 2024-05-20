@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -49,7 +50,7 @@ private fun AndroidStudyAppBar(
 }
 
 @Composable
-fun AndroidStudyApp() {
+fun AndroidStudyApp(widthSize: WindowWidthSizeClass) {
     val navController: NavHostController = rememberNavController()
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentScreen = AndroidStudyDestination.valueOf(
@@ -58,11 +59,19 @@ fun AndroidStudyApp() {
 
     Scaffold(
         topBar = {
-            AndroidStudyAppBar(
-                canNavigateBack = navController.previousBackStackEntry != null,
-                currentScreen = currentScreen,
-                navigateUp = { navController.navigateUp() }
-            )
+            if (currentScreen.hasAppBar) {
+                AndroidStudyAppBar(
+                    canNavigateBack = navController.previousBackStackEntry != null,
+                    currentScreen = currentScreen,
+                    navigateUp = { navController.navigateUp() }
+                )
+            }
         }
-    ) { innerPadding -> AndroidStudyNavHost(navController, innerPadding) }
+    ) { innerPadding ->
+        AndroidStudyNavHost(
+            navController = navController,
+            innerPadding = innerPadding,
+            widthSize = widthSize
+        )
+    }
 }

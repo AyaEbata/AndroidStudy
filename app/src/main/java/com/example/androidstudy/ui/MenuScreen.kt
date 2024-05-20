@@ -35,6 +35,7 @@ fun MenuScreen(
     onWoofButtonClicked: () -> Unit,
     onSuperheroesButtonClicked: () -> Unit,
     onThirtyDaysButtonClicked: () -> Unit,
+    onMyCityButtonClicked: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -121,6 +122,18 @@ fun MenuScreen(
             modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
         )
         Text(text = stringResource(R.string.reply_description))
+        Text(
+            text = stringResource(R.string.sports_text),
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
+        )
+        Text(
+            text = stringResource(R.string.sports_description),
+            modifier = Modifier.padding(bottom = 24.dp)
+        )
+        Button(onClick = onMyCityButtonClicked) {
+            Text(text = stringResource(R.string.my_city_button))
+        }
     }
 }
 
@@ -144,6 +157,7 @@ private fun MenuScreenPreview() {
             onWoofButtonClicked = {},
             onSuperheroesButtonClicked = {},
             onThirtyDaysButtonClicked = {},
+            onMyCityButtonClicked = {},
         )
     }
 }

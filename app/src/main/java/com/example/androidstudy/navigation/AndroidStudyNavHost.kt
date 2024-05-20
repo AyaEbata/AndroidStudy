@@ -2,6 +2,7 @@ package com.example.androidstudy.navigation
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -18,6 +19,7 @@ import com.example.androidstudy.ui.GreetingScreen
 import com.example.androidstudy.ui.ImageScreen
 import com.example.androidstudy.ui.LemonadeScreen
 import com.example.androidstudy.ui.MenuScreen
+import com.example.androidstudy.ui.mycity.MyCityScreen
 import com.example.androidstudy.ui.QuarterScreen
 import com.example.androidstudy.ui.SuperheroesScreen
 import com.example.androidstudy.ui.ThirtyDaysScreen
@@ -25,7 +27,11 @@ import com.example.androidstudy.ui.TipTimeScreen
 import com.example.androidstudy.ui.WoofScreen
 
 @Composable
-fun AndroidStudyNavHost(navController: NavHostController, innerPadding: PaddingValues) {
+fun AndroidStudyNavHost(
+    navController: NavHostController,
+    innerPadding: PaddingValues,
+    widthSize: WindowWidthSizeClass
+) {
     NavHost(
         navController = navController,
         startDestination = AndroidStudyDestination.Menu.name,
@@ -52,6 +58,7 @@ fun AndroidStudyNavHost(navController: NavHostController, innerPadding: PaddingV
                 onWoofButtonClicked = { navController.navigate(AndroidStudyDestination.Woof.name) },
                 onSuperheroesButtonClicked = { navController.navigate(AndroidStudyDestination.Superheroes.name) },
                 onThirtyDaysButtonClicked = { navController.navigate(AndroidStudyDestination.ThirtyDays.name) },
+                onMyCityButtonClicked = { navController.navigate(AndroidStudyDestination.MyCity.name) },
             )
         }
         composable(route = AndroidStudyDestination.Greeting.name) {
@@ -98,6 +105,9 @@ fun AndroidStudyNavHost(navController: NavHostController, innerPadding: PaddingV
         }
         composable(route = AndroidStudyDestination.ThirtyDays.name) {
             ThirtyDaysScreen()
+        }
+        composable(route = AndroidStudyDestination.MyCity.name) {
+            MyCityScreen(widthSize = widthSize)
         }
     }
 }

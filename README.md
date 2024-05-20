@@ -138,11 +138,19 @@
     - `navController.popBackStack()` の引数
         - `inclusive = false` : 指定した戻りたい画面が再度開かれる（他はクローズされる）
         - `inclusive = true` : 全てクローズした後に戻りたい画面を再度表示する
+- `NavHostController` クラスを使用してある画面から別の画面に移動する方法とは別に、単純な条件文で画面を変更することもできる
+    - 2つの画面間のみで切り替える小さなアプリなどに有用
+    - `BackHandler` で戻るボタンの実装をする必要がある
+- 画面のサイズ色々対応するには `calculateWindowSizeClass(this)` を使用する
+- `@Preview(showBackground = true, widthDp = 700)` のように書くことでプレビューで画面サイズを指定できる
+- 構成変更のテストを書くときは `StateRestorationTester` を使う
+    - `emulateSavedInstanceStateRestore()` で構成変更されたことをシミュレートする
 
 ## マテリアルデザインメモ
 - テーマビルダー: https://m3.material.io/theme-builder#/custom
 - アイコン: https://fonts.google.com/icons
 - typographyの種類: https://m3.material.io/styles/typography/applying-type
+- コンポーネント: https://m3.material.io/components
 
 ## JUnit メモ
 - `@get:Rule` はgetterプロパティに対して `@Rule` を適用するということ
@@ -171,3 +179,5 @@
 - [関数(Function)とプロパティ(Property)、どちらを使うべき？](https://zenn.dev/pytokyo/articles/63f862678958d335812a)
 - [navController.popBackStack()のinclusiveについて](https://medium.com/@banmarkovic/jetpack-compose-clear-back-stack-popbackstack-inclusive-explained-14ee73a29df5)
 - [サンプルソース](https://github.com/android/nowinandroid)
+    - ここでサンプルソース探せる: https://developer.android.com/samples?hl=ja
+    - これも参考になったソースコード: https://github.com/android/compose-samples
