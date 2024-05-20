@@ -1,9 +1,8 @@
-package com.example.androidstudy
+package com.example.androidstudy.ui
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
-import com.example.androidstudy.ui.TipTimeScreen
 import com.example.androidstudy.ui.theme.AndroidStudyTheme
 import org.junit.Rule
 import org.junit.Test

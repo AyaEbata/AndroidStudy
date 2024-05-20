@@ -1,5 +1,6 @@
 package com.example.androidstudy.ui.mycity
 
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
@@ -20,14 +21,18 @@ import com.example.androidstudy.ui.components.mycity.MyCityAppBar
 import com.example.androidstudy.ui.theme.AndroidStudyTheme
 import com.example.androidstudy.utils.MyCityContentType
 
+// MyCityScreen はonCreate()の代わり
 @Composable
 fun MyCityScreen(widthSize: WindowWidthSizeClass) {
     MyCityApp(widthSize = widthSize)
 }
 
+@VisibleForTesting
 @Composable
-private fun MyCityApp(widthSize: WindowWidthSizeClass) {
-    val navController: NavHostController = rememberNavController()
+fun MyCityApp(
+    widthSize: WindowWidthSizeClass,
+    navController: NavHostController = rememberNavController()
+) {
     val viewModel: MyCityViewModel = viewModel()
     val uiState by viewModel.uiState.collectAsState()
     val backStackEntry by navController.currentBackStackEntryAsState()
@@ -45,7 +50,8 @@ private fun MyCityApp(widthSize: WindowWidthSizeClass) {
         MyCityContentType.ListOnly -> MyCityDestination.Categories.name
         MyCityContentType.ListAndDetail -> MyCityDestination.CategoriesAndRecommendations.name
     }
-    val isHome = currentScreen == MyCityDestination.Categories || (currentScreen == MyCityDestination.CategoriesAndRecommendations && uiState.currentCategory == null)
+    val isHome =
+        currentScreen == MyCityDestination.Categories || (currentScreen == MyCityDestination.CategoriesAndRecommendations && uiState.currentCategory == null)
 
     Scaffold(
         topBar = {

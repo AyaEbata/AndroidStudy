@@ -1,5 +1,6 @@
-package com.example.androidstudy
+package com.example.androidstudy.ui.test
 
+import com.example.androidstudy.ui.calculateTip
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
 import java.text.NumberFormat

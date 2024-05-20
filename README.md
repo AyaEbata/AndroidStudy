@@ -83,6 +83,10 @@
 - テストメソッドは、テスト インスタンスの状態が可変であることによる予期しない副作用を避けるために、各テストメソッドが実行される前に JUnit がテストクラスの新しいインスタンスを作成する
 - テストメソッドの命名規則としては、`thingUnderTest_TriggerOfTest_ResultOfTest` で書く
     - ex) `cupcakeNavHost_clickOneCupcake_navigatesToSelectFlavorScreen`
+- `TestAnnotations.kt` のようにテストに自作したデバイスサイズのアノテーションを追加したら、 `Edit Configrations...` から以下のような設定を追加する
+    - `All in Package` を選択
+    - `Instrumentation arguments` にてName: `annotation` 、Value: `com.example.androidstudy.ui.testUtil.TestCompactWidth` を追加
+    - コンパクトエミュレータでテストを実行
 
 ## Android Studioメモ
 - `Control+O` でオーバーライドできるメソッドを呼び出して選択できる
