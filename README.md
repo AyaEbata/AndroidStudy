@@ -8,6 +8,7 @@
     1. Kotlin の概要: `Overview.kt`
     2. Kotlin の基礎: `Base1.kt`
     3. Kotlin の基礎（その他）: `Base2.kt`
+    4. コルーチン: `Coroutine.kt`
 - スタイルについて
     - 関数名はキャメルケース
     - 関数本体はスペース 4 つ分インデントする
@@ -49,6 +50,10 @@
     - 外から変更できなくなる
 - `dat aclass` の `copy()` を使用してオブジェクトをコピーすると、一部のプロパティを変更し、残りのプロパティはそのままにするということができる
 - `@VisibleForTesting` はテストのためにpublicやprotected、package privateにする場合につける
+- `runBlocking{}` はその中で起動された全てのCoroutineが完了するまで処理をブロックする
+    - テストや学習目的で使用する
+- `coroutineScope{}` で子ルーチンのローカルスコープを作成する
+    - すべての処理が完了するまでは元のスレッドに戻らないため、呼び出し元には同期オペレーションに見える
 
 ## Androidメモ
 - Android アプリの UI 要素では、2 種類の測定単位がある
