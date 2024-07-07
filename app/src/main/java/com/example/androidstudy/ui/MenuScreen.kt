@@ -134,6 +134,15 @@ fun MenuScreen(
         Button(onClick = onMyCityButtonClicked) {
             Text(text = stringResource(R.string.my_city_button))
         }
+        Text(
+            text = stringResource(R.string.race_tracker_text),
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
+        )
+        Text(
+            text = stringResource(R.string.race_tracker_description),
+            modifier = Modifier.padding(bottom = 24.dp)
+        )
     }
 }
 

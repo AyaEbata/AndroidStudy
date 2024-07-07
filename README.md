@@ -155,6 +155,10 @@
 - 構成変更のテストを書くときは `StateRestorationTester` を使う
     - `emulateSavedInstanceStateRestore()` で構成変更されたことをシミュレートする
 - `BackHandler` で戻るボタンの制御ができる
+  - `LaunchedEffect` の中である複数の処理を同時に実行するには `launch` でラップする
+    - 複数の `launch` を `coroutineScope` でラップすると `coroutineScope` がある層では完了を待って実行されるようになる
+    - https://developer.android.com/codelabs/basic-android-kotlin-compose-coroutines-android-studio?hl=ja&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-5-pathway-1%3Fhl%3Dja%26_gl%3D1*cy9eh4*_up*MQ..*_ga*MTUzMzQ2MTkxMS4xNzEzNjgzODE5*_ga_6HH9YJMN9M*MTcxMzY4MzgxOS4xLjAuMTcxMzY4MzgxOS4wLjAuMA..%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-coroutines-android-studio#5
+- coroutineのテストを書く場合 `org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4` を追加して `runTest` でラップする
 
 ## マテリアルデザインメモ
 - テーマビルダー: https://m3.material.io/theme-builder#/custom
@@ -191,3 +195,5 @@
 - [サンプルソース](https://github.com/android/nowinandroid)
     - ここでサンプルソース探せる: https://developer.android.com/samples?hl=ja
     - これも参考になったソースコード: https://github.com/android/compose-samples
+- [Themeがどれがどの役割かわかりやすい](https://m3.material.io/styles/color/roles)
+- [これもThemeがわかりやすい](https://betterprogramming.pub/jetpack-compose-theming-colors-1cf86754d5b9)

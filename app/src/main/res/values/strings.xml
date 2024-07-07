@@ -170,4 +170,6 @@
     <string name="subway">サブウェイ</string>
     <string name="subway_description">野菜好き＾＾</string>
     <string name="my_city_app_title">神奈川アプリ</string>
+    <string name="race_tracker_text">23. Race Tracker</string>
+    <string name="race_tracker_description">https://github.com/google-developer-training/basic-android-kotlin-compose-training-race-tracker を直接変更</string>
 </resources>
